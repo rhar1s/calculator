@@ -32,7 +32,7 @@ class NumberService {
         }
 
         if (value < 1 || value > 10) {
-            throw new Exception("Используйте значения только от 1 до 10");
+            throw new Exception("РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р·РЅР°С‡РµРЅРёСЏ С‚РѕР»СЊРєРѕ РѕС‚ 1 РґРѕ 10");
         }
 
         return new Number(value, type);
@@ -42,7 +42,7 @@ class NumberService {
 
         Number number = parseAndValidate(symbol);
         if (number.getType() != type) {
-            throw new Exception("Числа разных типов");
+            throw new Exception("Р§РёСЃР»Р° СЂР°Р·РЅС‹С… С‚РёРїРѕРІ");
         }
 
         return number;
@@ -76,7 +76,7 @@ class NumberService {
             char letter = roman.charAt(i);
             int num = letterToNumber(letter);
 
-            if (num < 0) throw new Exception("Неверный символ");
+            if (num < 0) throw new Exception("РќРµРІРµСЂРЅС‹Р№ СЃРёРјРІРѕР»");
             
 
             i++;
