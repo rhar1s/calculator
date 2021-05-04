@@ -20,7 +20,7 @@ public class ActionService {
                 result = first.getValue() / second.getValue();
                 break;
             default:
-                throw new Exception("спользуйте только + - * /");
+                throw new Exception("РСЃРїРѕР»СЊР·СѓР№С‚Рµ С‚РѕР»СЊРєРѕ + - * /");
         }
 
         if (first.getType() == NumberType.ROMAN) {
