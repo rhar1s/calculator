@@ -9,21 +9,21 @@ public class Calculator {
 
         while (true) {
 
-            System.out.println("Ввод: ");
+            System.out.println("Р’РІРѕРґ: ");
             String line = scanner.nextLine();
 
-            if (line.equals("выйти")) {
+            if (line.equals("РІС‹Р№С‚Рё")) {
                 break;
             }
 
             try {
                 String[] symbols = line.split(" ");
-                if (symbols.length != 3) throw new Exception("Попробуйте еще раз");
+                if (symbols.length != 3) throw new Exception("РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·");
 
                 Number firstNumber = NumberService.parseAndValidate(symbols[0]);
                 Number secondNumber = NumberService.parseAndValidate(symbols[2], firstNumber.getType());
                 String result = ActionService.calculate(firstNumber, secondNumber, symbols[1]);
-                System.out.println("Вывод: \n" + result);
+                System.out.println("Р’С‹РІРѕРґ: \n" + result);
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -35,10 +35,10 @@ public class Calculator {
     }
 
     public static void startCalc() {
-        System.out.println("Калькулятор работает только с арабскими и римскими числами от 1 до 10");
-        System.out.println("И работает только со следующими операциями:");
+        System.out.println("РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ СЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ СЃ Р°СЂР°Р±СЃРєРёРјРё Рё СЂРёРјСЃРєРёРјРё С‡РёСЃР»Р°РјРё РѕС‚ 1 РґРѕ 10");
+        System.out.println("Р СЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ СЃРѕ СЃР»РµРґСѓСЋС‰РёРјРё РѕРїРµСЂР°С†РёСЏРјРё:");
         System.out.println("+ - * /");
-        System.out.println("Чтобы выйти, введите 'выйти'");
+        System.out.println("Р§С‚РѕР±С‹ РІС‹Р№С‚Рё, РІРІРµРґРёС‚Рµ 'РІС‹Р№С‚Рё'");
     }
 
 
